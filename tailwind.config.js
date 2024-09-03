@@ -14,6 +14,13 @@ export default {
         pastelBlue: '#9BB9BF'
       }
     },
+    fontFamily: {
+      customFont: ['gamay', 'sans-serif'], 
+    },
+    fontWeight: {
+      normal: 400,
+      semibold: 700
+    },
   },
   plugins: [],
 }

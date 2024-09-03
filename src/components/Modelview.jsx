@@ -33,13 +33,14 @@ const Modelview = ({ index, groupRef, gsapType, controlRef, setRotationState, si
             />
         <group ref={groupRef} 
         name={`${index == 1} ? 'small : 'large' `}
-        position={[0, 0, 0]}>
+        position={[0, -.5
+        , 0]}>
 
         {/* Suspense component to handle loading states for async components */}
             <Suspense fallback={<Loader />}  >
             {/* Render the IPhone component with scaling based on the index */}
                 <IPhone
-                scale={index ==1 ? [15, 15, 15] : [17, 17, 17]} 
+                scale={index ==1 ? [.5, .5, .5] : [17, 17, 17]} 
                 item={item}
                 size={size}
 

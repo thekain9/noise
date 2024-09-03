@@ -1,35 +1,47 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Highlights from './components/Highlights';
-import Model from './components/Model';
-import Chip from './components/Chip';
-import Footer from './components/Footer';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+import Loading from './components/Loading';
 
-import  * as Sentry from '@sentry/react';
-import Features from './components/Features';
+const Navbar = lazy(() => import('./components/Navbar'));
+const Hero = lazy(() => import('./components/Hero'));
+const Highlights = lazy(() => import('./components/Highlights'));
+const PreviewModel = lazy(() => import('./components/PreviewModel.jsx')); 
+const Model = lazy(() => import('./components/Model'));
+const Chip = lazy(() => import('./components/Chip'));
+const Footer = lazy(() => import('./components/Footer'));
+const Features = lazy(() => import('./components/Features'));
 
 
 const App = () => {
-
-  // return <button onClick={() => methodDoesNotExist()}>Break the world</button>;
-  
   return (
-    <main className="bg-black">
-    <Navbar />
-    <Hero />
-    <Highlights />
-    <Model /> 
-    <Features />
-    <Chip />
-    <Footer />
-
-
-    </main>
-  )
-}
-
-// export default Sentry.withProfiler(App);
+    <Router>
+      <Suspense fallback={<Loading />}>
+        <main id="main-container" className="bg-black">
+          <Navbar /> {/* Always include Navbar here */}
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <Highlights />
+                  <PreviewModel />
+                  <Features />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/product"
+              element={<Model />}
+            />
+          </Routes>
+        </main>
+      </Suspense>
+    </Router>
+  );
+};
 
 export default App;
-
-

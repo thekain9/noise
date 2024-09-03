@@ -5,9 +5,12 @@ import { explore1Img, explore2Img ,exploreVideo } from '../utils';
 import gsap from 'gsap';
 
 const Features = () => {
-
+    // Reference to the video element for playback control
     const videoRef = useRef();
+
+    // GSAP animations setup
     useGSAP(() => {
+        // GSAP scroll trigger animation for the video element
         gsap.to('#exploreVideo', {
             scrollTrigger: {
                 trigger: '#exploreVideo',
@@ -19,7 +22,9 @@ const Features = () => {
             }
         })
 
+        // Animate the features title with GSAP
         animateWithGsap('#features_title', {y:0, opacity:1})
+        // Animate elements with the 'g_grow' class
         animateWithGsap('.g_grow', {
             scale:1,
             opacity: 1,
@@ -40,15 +45,18 @@ const Features = () => {
   return (
    <section className='h-full common-padding bg-zinc relative overflow-hidden'>
     <div className='screen-max-width'>
+         {/* Section title */}
         <div className='mb-12 w-full'>
-            <h1 id='features_title' className='section-heading'>Explore the full story</h1>
+            <h1 id='features_title' className='section-heading'>Discover the Full Spectrum</h1>
         </div>
 
         <div className='flex flex-col justify-center items-center overflow-hidden'>
+            {/* Subtitle and brand name */}
             <div className='mt-32 mb-24 pl-24'>
-                <h2 className='text-5xl lg:text-7xl font-semibold'>Iphone.</h2>
-                <h2 className='text-5xl lg:text-7xl font-semibold'>Forged in titanium.</h2>
+                <h2 className='text-5xl lg:text-7xl font-semibold'>Nebulox.</h2>
+                <h2 className='text-5xl lg:text-7xl font-semibold'>Precision in Every Detail</h2>
             </div>
+            {/* Video and feature images */}
             <div className='flex-center flex-col sm:px-10'>
                 <div className='relative h-[50vh] w-full flex items-center'>
                     <video playsInline id='exploreVideo' 
@@ -60,6 +68,8 @@ const Features = () => {
 
                 <div className='flex flex-col w-full relative'>
                     <div className='feature-video-container'>
+
+                        {/* Images showcasing features */}
                         <div className='overflow-hidden flex-1 h-[50vh]'>
                             <img src={explore1Img} alt='titanium'
                             className='feature-video g_grow' />
@@ -71,20 +81,22 @@ const Features = () => {
                     </div>
 
                     <div className='feature-text-container'>
+                        {/* Feature descriptions */}
                         <div className='flex-1 flex-center'>
-                            <p className='feature-text g_text'>iPhone 15 Pro is {' '}
+                            <p className='feature-text g_text'>The Nebulox Headphones {' '}
                                 <span className='text-white'>
-                                the first iPhone to feature an aerospace-grade titanium design, 
+                                feature an ultra-premium cushy design
                                 </span>,
-                                using the same alloy that  spacecrafts use for missions to Mars.
+                                crafted with a luxurious combination of memory foam and 
+                                high-grade steel for unparalleled comfort and durability.
                             </p>
                         </div>
                         <div className='flex-1 flex-center'>
-                            <p className='feature-text g_text'>iPhone 15 Pro is {' '}
+                            <p className='feature-text g_text'>Nebulox are {' '}
                                 <span className='text-white'>
-                                the first iPhone to feature an aerospace-grade titanium design, 
+                                the first to offer a unique blend of memory foam cushioning and polished steel,
                                 </span>,
-                                using the same alloy that  spacecrafts use for missions to Mars.
+                                engineered to deliver exceptional comfort and a sleek, modern look that stands out. 
                             </p>
                         </div>
                         

@@ -7,18 +7,15 @@ const Footer = () => {
         <div className='screen-max-width'>
             <div>
                 <p className='font-semibold text-steelGrey
-                text-xs'>More ways to shop: {' '}
+                text-xs'>Discover more about Nebulox: {' '}
                 <span className='underline text-cadetBlue'>
-                 Find an Apple Store {' '}
+                 Shop here{' '}
                 </span>
                 or {' '}
                 <span className='underline text-cadetBlue'>
-                 other retailer
+                 find another retailer
                 </span> {' '}
                 near you.
-                </p>
-                <p className='font-semibold text-steelGrey
-                text-xs'>Or call 0000000000
                 </p>
             </div>
 
@@ -27,7 +24,7 @@ const Footer = () => {
             <div className='flex md:flex-row flex-col 
             md: items-center justify-between'>
                 <p className='font-semibold text-steelGrey
-                text-xs'>Copyright 2024</p>
+                text-xs'>Copyright Arias 2024</p>
                 <div className='flex'>{footerLinks.map((link, i) => (
                     <p key={link} className='font-semibold text-steelGrey
                 text-xs'>{link}{' '}

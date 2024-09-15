@@ -9,8 +9,9 @@ import {
     yellowImg,
   } from "../utils";
   
+  // Navigation menu items
   export const navLists = ["About", "The Experience", "Support"];
-  
+  // Highlight slides for product features
   export const hightlightsSlides = [
     {
       id: 1,
@@ -47,6 +48,7 @@ import {
     },
   ];
   
+  // Models available for purchase
   export const models = [
     {
       id: 1,
@@ -78,10 +80,7 @@ import {
     },
   ];
   
-  export const sizes = [
-    { label: '6.1"', value: "small" },
-    { label: '6.7"', value: "large" },
-  ];
+// Footer links
   
   export const footerLinks = [
     "Privacy Policy",

@@ -64,4 +64,4 @@ While the current version focuses on frontend interactions, the developer has la
 
 ## 🙋‍♂️ About the Developer
 
-This project was developed by Arias, a passionate developer with a keen interest in 3D modeling and web development. Connect with them on [LinkedIn](www.linkedin.com/in/joss-arias-542a74238) 
+This project was developed by Arias, a passionate developer with a keen interest in 3D modeling and web development. Connect with them on [LinkedIn](https://www.linkedin.com/in/joss-arias-542a74238)
